@@ -1,0 +1,13 @@
+# Node
+node_modules/
+dist/
+build/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# Env
+.env
+
