@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  padding: 2em;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9c9c9;
+  color: #091769;
+  margin: 0;
+  padding: 1rem;
+}
+
+tr th, tr td {
+  border: 1px solid #05040d;
+  padding: 0.5rem;
+}
+
+input, button {
+  font-family: Arial, sans-serif;
+}
+
+.app-nav {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  color: rgb(52, 4, 57);
+  position: fixed;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+}
+
+.create-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+}
