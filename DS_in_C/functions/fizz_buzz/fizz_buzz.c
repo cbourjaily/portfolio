@@ -14,11 +14,6 @@ int main() {
 
 	buildArray(arr1, arr_len1, lower1, jump1);
 
-	for (int i = 0; i < arr_len1; i++) {
-		printf("%d", arr1[i]);
-	}
-	printf("\n");
-
 
 }
 
@@ -29,5 +24,15 @@ void buildArray(int* arr, int arr_len, int lower, int jump) {
 		int result = lower + (i * jump);
 		arr[i] = result;
 	}
+	
+	// Print the array
+	printf("Array length: %d\n", arr_len);
+
+	printf("Array: [");
+	for (int i = 0; i < arr_len-1; i++) {
+		printf("%d, ", arr[i]);
+	}
+	printf("%d]\n\n", arr[arr_len-1]);
+
 
 }
