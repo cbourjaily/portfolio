@@ -24,8 +24,20 @@ int main() {
 	int jump1 = 4;
 
 	buildArray(arr1, arr_len1, lower1, jump1);
+	fizzBuzz(arr1, arr_len1);
+
+	// Example 2
+	printf("# fizz_buzz example 2\n");
+	int arr2[15];
+	int arr_len2 = 15;
+	int lower2 = -36;
+	int jump2 = 11;
+
+	buildArray(arr2, arr_len2, lower2, jump2);
+	fizzBuzz(arr2, arr_len2);
 
 
+	return 0;
 }
 
 void fizzBuzz(int* arr, int arr_len) {
@@ -47,16 +59,16 @@ void fizzBuzz(int* arr, int arr_len) {
 	}
 	int endVal = arr[arr_len-1];
 	if ((endVal % 5 == 0) && (endVal % 3 == 0)) {
-		printf("%s]\n", FIZZBUZZ);
+		printf("%s]\n\n", FIZZBUZZ);
 	}
 	else if (endVal % 3 == 0) {
-		printf("%s]\n", FIZZ);
+		printf("%s]\n\n", FIZZ);
 	}
 	else if (endVal % 5 == 0) {
-		printf("%s]\n", BUZZ);
+		printf("%s]\n\n", BUZZ);
 	}
 	else {
-		printf("%d]\n", endVal);
+		printf("%d]\n\n", endVal);
 	}
 }
 
