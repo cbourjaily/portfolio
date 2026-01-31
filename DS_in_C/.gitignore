@@ -1,0 +1,7 @@
+# Ignore all compiled binaries
+*.o
+*.out
+*.exe
+
+# Ignore common C build outputs
+a.out
