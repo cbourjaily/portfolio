@@ -20,19 +20,35 @@ int main() {
 	int lower1 = -20;
 	int jump1 = 7;
 	
-	printf("Start array:\n");
 	buildArray(arr1, arr_len1, lower1, jump1);
+
+	printf("Start array:\n");
+	printArray(arr1, arr_len1);
 
 	reverse(arr1, arr_len1);
 	printf("Reversed array:\n");
+	printArray(arr1, arr_len1);
 	
+	// Example 2
+	printf("\n# reverse example 2\n");
+	int arr2[7];
+	size_t arr_len2 = 7;
+	int lower2 = -1;
+	int jump2 = 7;
 
+	buildArray(arr2, arr_len2, lower2, jump2);
+	printf("Start array:\n");
+	printArray(arr2, arr_len2);
+
+	reverse(arr2, arr_len2);
+	printf("Reversed array:\n");
+	printArray(arr2, arr_len2);
 
 	return 0;
 }
 
 
-void reverse(int* arr, size_t arr_len); {
+void reverse(int* arr, size_t arr_len) {
 	for (int i = 0; i < arr_len / 2; i++) {
 		int left = arr[i];
 		int right = arr[arr_len-1-i];
@@ -49,7 +65,6 @@ void buildArray(int* arr, size_t arr_len, int lower, int jump) {
                 int result = lower + (i * jump);
                 arr[i] = result;
         }
-	printArray(arr, arr_len);
 }
 
 void printArray(int* arr, size_t arr_len) {
@@ -62,10 +77,3 @@ void printArray(int* arr, size_t arr_len) {
         }
         printf("%d]\n", arr[arr_len-1]);
 }
-
-
-
-
-
-
-
