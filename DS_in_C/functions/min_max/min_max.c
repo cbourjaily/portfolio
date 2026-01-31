@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/* File name: min_max.c
+ * Author: Christopher Vote
+ * Description: The program takes an array of integers, a parameter with the size of the array, 
+ * 		and mutates an empty array of size 2, and modifies the empty array to contain
+ * 		the minimum value from the integer array at index 0 and the maximum value from
+ * 		the integer array at index 1. 
+
+
 void min_max(int* arr, int arr_len, int* mm);
 
 
