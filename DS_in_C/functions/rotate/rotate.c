@@ -8,7 +8,7 @@
  * 		parameter is negative and right if it is positive).
 */
 
-int* rotate(int* arr, size_t arr_len, int step);
+int* rotate(int* arr, size_t arr_len, int step, int* newArray);
 void buildArray(int* arr, size_t arr_len, int lower, int jump);
 void printArray(int* arr, size_t arr_len);
 
@@ -34,17 +34,18 @@ int main() {
 	int step8 = 268435456;
 	int step9 = -2147483648;
 
-	newArray1 = rotate(arr, arr_len, step1);
-	printArray(newArray1, arr_len);
+	int newArray1[arr_len1];
+	
+	rotate(arr1, arr_len1, step1, newArray1);
+	printArray(newArray1, arr_len1);
 }
 
-int* rotate(int* arr, size_t arr_len, int step) {
-	int newArray[arr_len];
-	modStep = step % arr_len;
+int* rotate(int* arr, size_t arr_len, int step, int* newArray) {
+	int modStep = step % arr_len;
 
 	if (modStep == 0) {
 		for (size_t i = 0; i < arr_len; i++) {
-			newArray[i] = arr[i]
+			newArray[i] = arr[i];
 		}
 	}
 	else if (modStep > 0) {
@@ -58,11 +59,13 @@ int* rotate(int* arr, size_t arr_len, int step) {
 		}
 	}
 	else {		// if (modStep < 0)
-		if ((i + arr_len - modStep) <= arr_len) {
-			newArr[i] = arr[(i + arr_len - modStep)];
-		}
-		else {
-			newArr[i] = arr[(i + arr_len - modStep) % arr_len];
+		for (size_t i = 0; i < arr_len; i++) {
+			if ((i + arr_len - modStep) <= arr_len) {
+				newArray[i] = arr[(i + arr_len - modStep)];
+			}
+			else {
+				newArray[i] = arr[(i + arr_len - modStep) % arr_len];
+			}
 		}
 	}
 	return newArray;
