@@ -10,15 +10,15 @@
  * 		by 3 are replaced with "fizz", and values divisible by 5 are replaced with "buzz".
 */
 
-void buildArray(int* arr, int arr_len, int lower, int jump);
-void fizzBuzz(int* arr, int arr_len);
+void buildArray(int* arr, size_t arr_len, int lower, int jump);
+void fizzBuzz(int* arr, size_t arr_len);
 
 int main() {
 
 	// Example 1
 	printf("# fizz_buzz example 1\n");
 	int arr1[7];
-	int arr_len1 = 7;
+	size_t arr_len1 = 7;
 
 	int lower1 = -5;
 	int jump1 = 4;
@@ -29,7 +29,7 @@ int main() {
 	// Example 2
 	printf("# fizz_buzz example 2\n");
 	int arr2[15];
-	int arr_len2 = 15;
+	size_t arr_len2 = 15;
 	int lower2 = -36;
 	int jump2 = 11;
 
@@ -40,7 +40,7 @@ int main() {
 	return 0;
 }
 
-void fizzBuzz(int* arr, int arr_len) {
+void fizzBuzz(int* arr, size_t arr_len) {
 
 	printf("[");
 	for (int i = 0; i < arr_len-1; i++) {
@@ -73,7 +73,7 @@ void fizzBuzz(int* arr, int arr_len) {
 }
 
 
-void buildArray(int* arr, int arr_len, int lower, int jump) {
+void buildArray(int* arr, size_t arr_len, int lower, int jump) {
 	
 	for (int i = 0; i < arr_len; i++) {
 		int result = lower + (i * jump);
@@ -81,7 +81,7 @@ void buildArray(int* arr, int arr_len, int lower, int jump) {
 	}
 	
 	// Print the array
-	printf("ARR Size: %d ", arr_len);
+	printf("ARR Size: %ld ", arr_len);
 
 	printf("[");
 	for (int i = 0; i < arr_len-1; i++) {
