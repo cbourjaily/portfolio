@@ -7,8 +7,8 @@
  * 		an integer array.
 */
 
-void buildArray(int* arr, size_t arr_len, int lower, int jump); 
 void reverse(int* arr, size_t arr_len);
+void buildArray(int* arr, size_t arr_len, int lower, int jump); 
 void printArray(int* arr, size_t arr_len);
 
 int main() {

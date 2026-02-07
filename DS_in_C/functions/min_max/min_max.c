@@ -6,9 +6,9 @@
  * 		and mutates an empty array of size 2, and modifies the empty array to contain
  * 		the minimum value from the integer array at index 0 and the maximum value from
  * 		the integer array at index 1. 
+*/
 
-
-void min_max(int* arr, int arr_len, int* mm);
+void minMax(int* arr, int arr_len, int* mm);
 
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
 	}
 	printf("%d]\n", arr1[arr_len1-1]);
 
-	min_max(arr1, arr_len1, mm1);
+	minMax(arr1, arr_len1, mm1);
 
 	printf("Min: %d, Max: %d\n\n", mm1[0], mm1[1]);
 
@@ -47,7 +47,7 @@ int main() {
 	}
 	printf("%d]\n", arr2[arr_len2-1]);
 
-	min_max(arr2, arr_len2, mm2);
+	minMax(arr2, arr_len2, mm2);
 
 	printf("Min: %d, Max: %d\n\n", mm2[0], mm2[1]);
 
@@ -67,7 +67,7 @@ int main() {
 	}
 	printf("%d]\n", arr3[arr_len3-1]);
 
-	min_max(arr3, arr_len3, mm3);
+	minMax(arr3, arr_len3, mm3);
 
 	printf("Min: %d, Max: %d\n\n", mm3[0], mm3[1]);
 
@@ -76,7 +76,7 @@ int main() {
 
 
 
-void min_max(int* arr, int arr_len, int* mm) {
+void minMax(int* arr, int arr_len, int* mm) {
 	int min = arr[0];
 	int max = arr[0];
 

@@ -1,18 +1,13 @@
 #include <stdio.h>
 #include "array_utils.h"
 
-void buildArray(int* arr, int arr_len, int lower, int jump) {
-    for (int i = 0; i < arr_len; i++) {
-        arr[i] = lower + (i * jump);
-    }
+void buildArray(int* arr, size_t arr_len, int lower, int jump) {
 
-    printf("ARR Size: %d [", arr_len);
-    for (int i = 0; i < arr_len - 1; i++) {
-        printf("%d, ", arr[i]);
-    }
-    printf("%d]\n", arr[arr_len - 1]);
+        for (int i = 0; i < arr_len; i++) {
+                int result = lower + (i * jump);
+                arr[i] = result;
+        }
 }
-
 
 void printArray(int* arr, size_t arr_len) {
 
